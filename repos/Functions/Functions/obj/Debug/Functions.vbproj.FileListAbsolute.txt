@@ -1,0 +1,12 @@
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\bin\Debug\Functions.exe.config
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\bin\Debug\Functions.exe
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\bin\Debug\Functions.pdb
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\bin\Debug\Functions.xml
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\obj\Debug\Functions.vbproj.AssemblyReference.cache
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\obj\Debug\Functions.Form1.resources
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\obj\Debug\Functions.Resources.resources
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\obj\Debug\Functions.vbproj.GenerateResource.cache
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\obj\Debug\Functions.vbproj.CoreCompileInputs.cache
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\obj\Debug\Functions.exe
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\obj\Debug\Functions.xml
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\Functions\Functions\obj\Debug\Functions.pdb
