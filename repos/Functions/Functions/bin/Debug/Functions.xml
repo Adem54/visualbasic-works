@@ -22,5 +22,14 @@ Functions
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Functions.My.Resources.Resources.OpenStreetMap">
+<summary>
+  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+&lt;!-- saved from url=(0050)https://www.openstreetmap.org/#map=5/65.413/17.886 --&gt;
+&lt;html lang=&quot;nb&quot; dir=&quot;ltr&quot;&gt;&lt;head data-locale=&quot;nb&quot; data-preferred-editor=&quot;id&quot; data-location=&quot;{&amp;quot;minlon&amp;quot;:4.650167,&amp;quot;minlat&amp;quot;:57.977917,&amp;quot;maxlon&amp;quot;:31.078052520751953,&amp;quot;maxlat&amp;quot;:71.18811}&quot;&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=1.0, ma [rest of string was truncated]&quot;;.
+</summary>
+</member>
 </members>
 </doc>

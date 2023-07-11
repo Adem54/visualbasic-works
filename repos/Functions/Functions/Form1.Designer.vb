@@ -26,6 +26,7 @@ Partial Class Form1
         Me.MyTxtBox1 = New System.Windows.Forms.TextBox()
         Me.MyLabel1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.SuspendLayout()
         '
         'MyBtn1
@@ -43,7 +44,7 @@ Partial Class Form1
         Me.MyTxtBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MyTxtBox1.Location = New System.Drawing.Point(337, 118)
         Me.MyTxtBox1.Name = "MyTxtBox1"
-        Me.MyTxtBox1.Size = New System.Drawing.Size(179, 38)
+        Me.MyTxtBox1.Size = New System.Drawing.Size(179, 30)
         Me.MyTxtBox1.TabIndex = 1
         '
         'MyLabel1
@@ -52,7 +53,7 @@ Partial Class Form1
         Me.MyLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MyLabel1.Location = New System.Drawing.Point(176, 123)
         Me.MyLabel1.Name = "MyLabel1"
-        Me.MyLabel1.Size = New System.Drawing.Size(123, 31)
+        Me.MyLabel1.Size = New System.Drawing.Size(98, 25)
         Me.MyLabel1.TabIndex = 2
         Me.MyLabel1.Text = "MyLabel1"
         '
@@ -66,11 +67,22 @@ Partial Class Form1
         Me.Button1.Text = "Exit"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(0, 332)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(800, 118)
+        Me.WebBrowser1.TabIndex = 4
+        Me.WebBrowser1.Url = New System.Uri("https://www.google.com/maps/@59.1840456,9.6206656,15z?entry=ttu", System.UriKind.Absolute)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MyLabel1)
         Me.Controls.Add(Me.MyTxtBox1)
@@ -86,4 +98,5 @@ Partial Class Form1
     Friend WithEvents MyTxtBox1 As TextBox
     Friend WithEvents MyLabel1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents WebBrowser1 As WebBrowser
 End Class

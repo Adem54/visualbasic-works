@@ -1,0 +1,12 @@
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\bin\Debug\uiformdesign.exe.config
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\bin\Debug\uiformdesign.exe
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\bin\Debug\uiformdesign.pdb
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\bin\Debug\uiformdesign.xml
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\obj\Debug\uiformdesign.vbproj.AssemblyReference.cache
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\obj\Debug\uiformdesign.Resources.resources
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\obj\Debug\uiformdesign.vbproj.GenerateResource.cache
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\obj\Debug\uiformdesign.vbproj.CoreCompileInputs.cache
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\obj\Debug\uiformdesign.exe
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\obj\Debug\uiformdesign.xml
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\obj\Debug\uiformdesign.pdb
+C:\Users\ae_netsense.no\source\visualbasic-works\repos\uiformdesign\uiformdesign\obj\Debug\uiformdesign.MyFrm1.resources
