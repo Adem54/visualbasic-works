@@ -10,6 +10,10 @@
 
     End Sub
 
+    ' AYARLAR KAYDEDILME DURUMUNDAKI SPINNER DOLMASI MANTIGINDA ASAGIDAKI BESTPRACTISE GIBI...PROGRESSBAR TOOL U VE TIMER BIRLIKTE BU SEKILDE KULLANILABILIYOR
+    ' TIMER AYNI WHILE-DO DONGUSU MANTIGINDA KULLANILABILIYOR...HARIKA BESTPRACTISE...
+    ' Timer in Interval proeprty si 1000 yapilirsa 1 saniye de bir calisacaktir...Timer.Start() basladiktan sonra Timer.Stop() a basilinca ya kadar calisacaktir, ama 
+    ' ornegin biz Interval i 1 yaparsak o zaman da saniye  nin 1000 de 1 i hizinda calisir ve progressbar cok hizli bir sekilde dolacaktir
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
         ' Me bu Sub procedure nin icinde bulundugu class olan MyFrm1 class ini temsil ediyor
@@ -31,6 +35,11 @@
         ProgressBar1.Style = ProgressBarStyle.Continuous
         ProgressBar1.Value = 0
         Timer1.Start()
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
     End Sub
 End Class
 ' Simdi sunu bilelim her bir tool, yani Button,Form, ListBox, ComboBox, Label bunlar birer class tir ve bunmlarin kendilerine ait properties ve methodlar i vardir..
@@ -150,3 +159,75 @@ End Class
 ' biciminde ta ki biz belli sartlar saglandiginda Timer.Stop() u calistirana kadar
 ' timer ozellikle ProgrerssBar.Value u yu max 100 ayarlariz ve timer calistiginda da ProgresBar.Value 1 den baslar ve her seferinde 100 den kucuk ise 1 arttir deriz ve 100 olunca
 ' Timer.Stop diyerek Timer i durdurmus oluruz...yani Butona tiklayinca kaydetme islemi gerceklesirken, web de yaptigmz spinner mantigini progressbar da bu sekilde yapabiliriz
+' Timer calisma mantigi olarak herhangi bir butona basma veya bizim belirledigmz bir event ile calistirilmaya baslar, Timer1.Start() ile ve bizim kontrol ettgimiz herhangi bir sart saglanincaya kadar
+' Timer Timer.Tick eventi icerisinde yaptigimiz condition in durumuna gore calismaya devam eder, taki sart saglanip bizim Timer i durduracagimz ana kadar..Timer1.Stop()
+
+
+
+' COMBOBOX KULLANIMI BESTPRACTISE...
+' ComboBox demek SelectOptins demektir web deki karsiligi olarak
+' SEcilen option yani ComboBox da secilen secenege gore condition yapabiliriz
+' if ComboBox1.Text = "Yellow" Then Me.BackColor = Color.Yellow yap diyebiliriz....
+' Ayni islemi farkli bir mantik la index uzerinden giderek de yapabiliriz
+'  if ComboBox1.SelectedIndex = 0 Then Me.BackColor = Color.Yellow'
+'  if ComboBox1.SelectedIndex = 1 Then Me.BackColor = Color.Red
+
+'BU ISLEMI BIZ SELECT CASE DONGUSU ILE DE  YAPABILIRZ...
+
+' SELECT CASE DONGUSU...(SWITCH-CASE E KARSILIK GELIYOR) 
+'Certainly! The Select Case statement In VB.Net Is used To perform multiple conditional checks On a Single expression And 
+'    execute different code blocks based On the matching condition. It Is similar To the switch statement In other programming languages.
+
+
+' EXAMPLE OF USAGE
+
+'Dim dayOfWeek As Integer = 3
+'Dim dayName As String = ""
+
+'Select Case dayOfWeek
+'Case 1
+'dayName = "Sunday"
+'Case 2
+'dayName = "Monday"
+'Case 3
+'dayName = "Tuesday"
+'Case 4
+'dayName = "Wednesday"
+'Case 5
+'dayName = "Thursday"
+'Case 6
+'dayName = "Friday"
+'Case 7
+'dayName = "Saturday"
+'Case Else
+'dayName = "Invalid day"
+'End Select
+
+'Console.WriteLine("The day is: " & dayName)
+
+' The day is: Tuesday
+
+' LISTBOX KULLANIM!! VE RESIM EKLEME!!!
+' ListBox larda array data si icerisindeki item lari listelemek icin kullanilir genellikle ama tabi kullanicinin ListBox uzerinde herhangi bir item i secmesi vs gibi
+' durumlarda da event- tetiklenmis oluyor...
+' ListBox1.SelectedIndex = 0 Then....diyerek eger 1. item secilmis ise...diyoruz
+
+' ListBox1.SelectedIndex = 0 Then
+' Me.BackgroundImage = My.Resources.picture1  --Me.BackgroundImage-yani Form1 in BackgroundImage i olarak My.Resources.picture-(My demek benim dokumanim demek ve sonrasinda
+' Resources..yani biz disardan image ekledigimz zaman...Tabi bu Resources klasoru altina farkli resim dosyalarinn gelebilmesi icin Form properties inde BacgroundImage ye gidip add diyerek
+' 4 tane farkli resim ekleriz...ki o da proje dosyasinin altinda Resources klasoru altina bu resim dosyalarini getirir ve bizde bunlari My.Resources.picture1 diyerek seceiliriz
+
+'MY.RESOURCES...BIZIM DISARDAN EKLEDIGMZ RESOURCES ALTINA GELEN IMAGES LERIMIZI SECERKEN....MY.RESOURCES. DERSEK ZATEN RESOURCES KLASORU ALTINDA BULUNAN
+'IMAGES LERI BIZE GOSTERECEKTIR
+'PICTUREBOX TOOL UNU KULLANIRSAK ORNEGIN 
+'MyPictureBox1.Image = My.Resources.picture1 diyerek Picturebox imiza da if conditiona bagli olarak...bir resim atamasi yapabiliriz..ListBox tan secilen value ye gore
+' PictureBox in Image ine resim atamasi yapabiliriz
+' Biz windows form uygulamalarimzda hareketli gif ler de kullanabiliriz....eeger ornegin uzaktan veya veritabanindan data cekip data nin gelmesi zaman alacak ise...data gelene
+' kadar gif spinner gostermek istersek gif resimler i Lutfen bekleyiniz diyerek yazarak da kullanabiliriz...ornegin giris yaparken kullanici girene kadar boyel bir resim gostererek
+' bekletebiliriz...Tabi ki PictureBox icerisine boyle bir gif resiim atabiliriz...
+' ProgressBar1.Value = 0  ProgressBar1.Visible = True veya ProgressBar1.Visible = False  PictureBox1.Visible = True
+
+'STRING BIRLESTIRME
+' Visual Basic te String birlestirme islemi & karakterini kullanarak yapilir
+' Dim result As String = "Hello" & " Adem"
+'Console.WriteLine(result)

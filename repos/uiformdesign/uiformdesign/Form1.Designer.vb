@@ -27,6 +27,7 @@ Partial Class MyFrm1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -63,12 +64,22 @@ Partial Class MyFrm1
         'Timer1
         '
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Yellow", "Red", "Blue", "Orange"})
+        Me.ComboBox1.Location = New System.Drawing.Point(109, 100)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(174, 24)
+        Me.ComboBox1.TabIndex = 3
+        '
         'MyFrm1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -83,4 +94,5 @@ Partial Class MyFrm1
     Friend WithEvents Button2 As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
