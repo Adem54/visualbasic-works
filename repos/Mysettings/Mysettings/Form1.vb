@@ -189,6 +189,51 @@ End Class
 ' ayni title i kullaniriz...istersek de new diyerek yeni olustururuz, Default value de girebiliyoruz...yine ayni yerde..Simdi biz bu ekledigmz yeni colon u eklenip eklenmedigin
 ' gormek istersek de proje dosyalarimzin visual studio da sag sidebar da bulundugu yerde My Project e cift tiklarsak ordan geleecek olan sol sidebar dan da Settings i secersek ordas
 ' tablo ya ekledigmiz column title inin gelip gelmedigni gormus oluruz
+' HARIKA BESPTRACTISE...MANTIGI..!!!!
+' Yani bu sekilde My.Settings tablo suna kolon title larini her bir textbox in property sinden de yapabiliyoruz ve dikkat edelimmm...EGER ORNEGIN 2. FORMUOLUSTURDUK VE 
+' 1.FORM DAKI TEXTBOX LARI DIREK KOPPYALAYIP ORDA KULLANIRSAK FARKLI FORMLARDA AYNI TEXTBOX NAME LERI KULLANILDIGI ICIN VE HER IKI FORM DA EGER MY.SETTINGS DE KOLON-TITLE OLARAK
+' SECERKEN AYNI NAME, SURNAME VS GIBI AYNI ISMI KULLANIRSA O ZAMAN ISTE DINAMIK OLARAK BIR FORMDA KAYDEILEN DATA DIGERINE DE OTOMATIK OLARAK GECECEKTIR.....ONEMLI..
+' Ama eger ornegin form2 de tamamen farkli Name de bir textbox kullanirsak ve My.Settings deki colomn title ini da kendine has yaparsak o zaman artik iste Form1 de yaptimgz surecleri
+' aynisini Form2 de de yapariz..
 
 ' BESTPRACITSE--INFORMATION
 '  Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click bu tarz click olaylarinda Handles Button1.Click in olmasi gerekir yoksa, click olayi calismayacaktir
+
+' NOT: BUTTONLARA BACKGROUNDIMAGE VERDIGMZ ZAMAN EGER EKLEDIGMIZ IMAGE IN DE ARKA PLANI MEVCUT ISE YANI TRANSAPARAN DEGIL ISE, BIZIM AYRIYETEN BACKGROUNDCOLOR EKLEMEMIZIN 
+' BIR ANLAMAI OLMAYACAKTIR CUNKU UYGULANMAYACAKTIR CUNKU ZATEN EKLDIGIMMZ IMAGE IN KENDI ARKA PLANI OLACAKTIR...
+
+
+' My.Resources....
+' HERHANGI PICTUREBOX VEYA BUTTON A EKLEDIGMIZ IMAGES LERI KOD UZERINDEN DINAMIK KULLANMAYA CALISIRKEN TEKRAR HATILRAYALIM...My.Resources. diyerek erisiuyorduk!!!!unutmayalim
+
+' STATUS-DURUMU BELIRLEME VE DINAMIK BIR SEKILDE KU LLANMA
+' FORM OLAYLARINDA DA STATUS DEGISKENI VEREREK ONU FORMLOAD A GELIRKEN ILK DATA GELIRKEN SONRA FORM LOAD OLDUGUNDA VE DIGER TUM DURUMLAR ICIN BU STATE TI DEGISTIREREK ASLINDA
+' FARKLI DURUMLAR DA YAPACAGIMZ DINAMIKLIKLERI AYARLAYABILIRIZ...BU DA YINE COK MANTIKLI VE EFFEKTIF BIR  YONTEMDIR
+' YANI ORNEGIN SES DOSYASININ CALISMAMA DUURMUNDA ARKA PLANINI CALISMAYAN BIR IMAGE- RESIM GOSTER CEK SEKILDE DINAMIK HALDE KONTROL ETMEK
+
+' SES DOSYALARININ CALISTIRILMASI!!!!!
+' BIZIM TOOLBOX IMIZDA VAR OLMAYAN VE MICROSOFT UN KENDISINDE OLAN TOOL LARI DA BIZ SONRADAN DLL DOSYALARI ARACILIGI ILE ASAGIDAKI GIBI TOOLBOX ICERISINE DAHIL EDEREK KULLANABILY ORUZ
+
+' SES DOSYALARIN CALISTIRMAK ICIN..SOL SIDEBAR DA KI GENERAL UZERINDE SAGA TIKLAYHARAK CHOOSE ITEMS DAN COMPONENT SECERSEK BIRAZ BEKLEYINCE ORDAKI COM Components e tiklayinca
+' orda en aasagi siralarda Microsoft Media .dll var onu secerek eklemsi oluruz, ve artik toolbox dan Microsoft Media Play er i bularak kullanabiliriz...demektir...
+' Yine diger araclari kullanma mantiginda muhtemelen bu araci da ekleyince bir name i var ve bu namei o aracin class instancesini temsil ederek, bu Name value si uzerinden 
+' biz bu araca ait tum porperties, events ve methods lara eriserek, o tool a ait tum functionality yi dynamic olarak kullanabiliyoruz...
+' AxWindowsMediaPlayer1.URL = Label1.Text   Bu Label1.Text i icersine ataniyor secilen mp3 un url adresi ilk once kullaniciya dosya sectirirken
+' AxWindowsMediaPlayer1.Ctlcontrols.play() mp3 calistirilirken kullailir
+'  AxWindowsMediaPlayer1.Ctlcontrols.pause()
+' Ayrica da dosya secilirken kullanilacak olan dosyaSecme pencresinde(Openfiledialog toolu  ) filtrleeme yaptirarak belli u zantildardaki dosyalari secsin sadece diye de ayarlayabiliriz
+' Dosya ac image butonjna tiklayinca OpenDialog-DosyaSec Name ismi verilior
+' Dosya sec icin Title atayabiliriz birde filtreleme verilebiliyor yani belli uzantidaki dosyalara secebilsin diye
+' DosyaSec.Title = "Muzik dosyasi sec"
+' DosyaSec.Filter = "Mp3 file (*.mp3) |*.mp3|Mp4 file (*.mp4) |*.mp4|"    bu sekilded once aciklama sonra hangi dosya turu oldugunu belirterek sadece .mp3 ve .mp4 turundeki dosyalari
+' secebilmesini saglamis oluruz..
+' if DosyaSec.ShowDialog = vbOk Then
+' Yani once URL INE ATAMA YAPIYORUZ..
+' STATUS UN MP3 UN CALISMADAN ONCE, CALISMIYOR, CALISTIKTAN SONRA CALISMA HALI, CALISIYOR, CALISIRKEN PAUSE YE TIKLANDIGINDA PAUSE HALI, PAUSE SEKLINDE STAUS LER ATAYARAK
+' DAHA EFEKTIF BIR SEKILDE KULLANABILIRIZ!!!
+' MP3 OYNATMA ISLEMLERINDE 3 FARKLI BUTON FARKLI IMAGELERDE PLAY-PAUSE-STOP IMAGE LERI ARKA PLANI YERLESTIREREK BU 3 BUTOJNUN ISLEVLERINE GORE HEM MP3 CALMA ISLEMI HEM DE 
+' ARKA PLANLARININ AKTIF PASIF GOZUKMME ISLEMLERI BUNLARIN HEPSINI BU BUTTONLAR UZERINDEN HALLEDILIR
+
+' DISARDAN PROJEMIZ ICERISINE DOSYA EKLEMEK!!!!
+' proje dosyalarijin oldugu yerde My Project ksimina cift tiklayarak sol sidebar da acilan  menu de Resources e tiklayinca bir pencere acilir iste biz eklemek istedigmz
+' herhangi bir dosyayi buraya suruklersek o zaman 
